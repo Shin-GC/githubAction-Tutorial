@@ -37,3 +37,6 @@ jobs:
       - name: checkout develop
         uses: actions/checkout@v2
         # 실제 main branch에 push하면 동작할 내용들
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
