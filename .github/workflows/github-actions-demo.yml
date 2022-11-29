@@ -33,6 +33,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: ls
-      - run: cd..
-      - run: git branch 
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+
         # 실제 main branch에 push하면 동작할 내용들
