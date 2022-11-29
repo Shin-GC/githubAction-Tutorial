@@ -25,7 +25,7 @@ name: deploy
 # main브랜치에 push가 동작되면 실행된다 (pull_request merge시 추가됩니다)
 on:
   push:
-    branches: [main]
+    branches: [main, develop]
 
 jobs:
   build:
@@ -33,4 +33,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: ls
+      - run: git branch
         # 실제 main branch에 push하면 동작할 내용들
