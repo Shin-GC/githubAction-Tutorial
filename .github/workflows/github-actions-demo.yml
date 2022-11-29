@@ -33,5 +33,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: ls
-      - run: git branch
+      - run: cd..
+      - run: git branch 
         # 실제 main branch에 push하면 동작할 내용들
