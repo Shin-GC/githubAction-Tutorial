@@ -40,5 +40,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - run: yarn
+      - name: install dependency
+        run: yarn install
+      - name: deploy to heroku
+        uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "githubaction-test" #Must be unique in Heroku
+          heroku_email: "cjs4022@gmail.com"
       
