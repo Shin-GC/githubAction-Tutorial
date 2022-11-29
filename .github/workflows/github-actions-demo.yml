@@ -34,5 +34,6 @@ jobs:
     steps:
       - run: ls
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-
+      - name: checkout develop
+        uses: actions/checkout@v2
         # 실제 main branch에 push하면 동작할 내용들
